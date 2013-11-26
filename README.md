@@ -5,6 +5,12 @@ Track the time it takes a user to complete a form (with JQuery)
 
 
 ##How to use
-The function timeTracker takes two params:
-The first param may either be a string or an array of strings that are the element ids
-The second param (optional) is a callback to handle the results
+`timeTracker(element-id, callback);`
+
+e.g:
+
+`<input type="textArea" id="test"></input>`
+
+`timeTracker('test', function(result){console.log('result', result)});`
+
+You can optionally pass in an array of ids to track.  Note that the callback will be attached to each node, rather than the group of nodes.
